@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDrag;
 
     public float jumpForce;
-    public float jumpCoolddown;
+    public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
     
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Ground Check")]
-     public float playerHeight;
+    public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
 
@@ -58,13 +58,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.drag = groundDrag * 0.5f;
+            rb.drag = groundDrag * 0.75f;
         }
        // debug
-        Debug.Log("Am I grounded? :" + grounded);
-        if (Input.GetKey(jumpKey))
+        //Debug.Log("Am I grounded? :" + grounded);
+        //if (Input.GetKey(jumpKey))
             
-            Debug.Log("Pressed:" + jumpKey);
+        //    Debug.Log("Pressed:" + jumpKey);
 
 
     }
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             readyToJump = false;
             Jump();
 
-            Invoke(nameof(ResetJump), jumpCoolddown);
+            Invoke(nameof(ResetJump), jumpCooldown);
         }
         
     }
