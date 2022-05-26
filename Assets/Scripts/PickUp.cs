@@ -36,19 +36,67 @@ public class PickUp : MonoBehaviour
                 DropObject();
             }    
         }
-        // use fixed update for this?
+        // use fixed update for this? Answer below
         if (heldObj != null)
         {
-            MoveObject();
+           MoveObject();
         }
     }
-    
+
+    private void FixedUpdate()
+    {
+        // needs a refactor. Decouple the keypresses using a seperate function and a different function for the movement
+        //if (heldObj != null)
+        //{
+        //    MoveObject();
+        //}
+    }
+
     void MoveObject()
     {
         if (Vector3.Distance(heldObj.transform.position, holdParent.position) > 0.1f)
         {
             Vector3 moveDirection = holdParent.position - heldObj.transform.position;
-            heldObj.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
+            // no force is more stable
+            // heldObj.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
+            // rotate the object using the IKJLUO keys
+            if (Input.GetKey(KeyCode.I))
+            {
+                heldObj.transform.Rotate(Vector3.up * Time.deltaTime * 100);
+            }
+            if (Input.GetKey(KeyCode.K))
+            {
+                heldObj.transform.Rotate(Vector3.down * Time.deltaTime * 100);
+            }
+            if (Input.GetKey(KeyCode.J))
+            {
+                heldObj.transform.Rotate(Vector3.left * Time.deltaTime * 100);
+            }
+            if (Input.GetKey(KeyCode.L))
+            {
+                heldObj.transform.Rotate(Vector3.right * Time.deltaTime * 100);
+            }
+            // rotate the object on the z axis
+            if (Input.GetKey(KeyCode.U))
+            {
+                heldObj.transform.Rotate(Vector3.forward * Time.deltaTime * 100);
+            }
+            if (Input.GetKey(KeyCode.O))
+            {
+                heldObj.transform.Rotate(Vector3.back * Time.deltaTime * 100);
+            }
+            // move the object away from the camera using the mouse wheel
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                heldObj.transform.position += mainCamera.transform.forward * Time.deltaTime * 50;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            {
+                heldObj.transform.position -= mainCamera.transform.forward * Time.deltaTime * 50;
+            }
+            
+
+
         }
     }
     
@@ -58,6 +106,7 @@ public class PickUp : MonoBehaviour
         {
            Rigidbody objRig = pickObj.GetComponent<Rigidbody>();
             objRig.useGravity =  false;
+            objRig.freezeRotation = true;
             objRig.drag = 10;
 
             objRig.transform.parent = holdParent;
@@ -71,6 +120,7 @@ public class PickUp : MonoBehaviour
         {
             Rigidbody heldRig = heldObj.GetComponent<Rigidbody>();
             heldRig.useGravity = true;
+            heldRig.freezeRotation = false;
             heldRig.drag = 1;
             heldRig.transform.parent = null;
             heldObj = null;
