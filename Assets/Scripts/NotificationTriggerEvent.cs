@@ -19,12 +19,12 @@ public class NotificationTriggerEvent : MonoBehaviour
     [SerializeField] private bool disableAfterTimer = false;
     [SerializeField] private float disableTimer = 1.5f;
 
-    public SphereCollider objectCollider;
+    public Collider objectCollider;
     private bool inRange = false;
 
     private void Awake()
     {
-        objectCollider = gameObject.GetComponent<SphereCollider>();
+        objectCollider = gameObject.GetComponent<Collider>();
         notificationUI.SetActive(false);
 
 
