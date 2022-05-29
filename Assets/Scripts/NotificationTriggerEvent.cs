@@ -9,9 +9,12 @@ public class NotificationTriggerEvent : MonoBehaviour
     [Header("UI Content")]
     [SerializeField] private Text notificationTextUI;
     [SerializeField] private GameObject notificationUI;
-
+    [SerializeField] private RawImage notificationImageUI;
+    
     [Header("Message Customisation")]
+    
     [SerializeField][TextArea] private string notificationMessage;
+    [SerializeField] private Texture notificationImage;
 
 
     [Header("Notification Removal")]
@@ -52,11 +55,12 @@ public class NotificationTriggerEvent : MonoBehaviour
 
     IEnumerator EnableNotification()
     {
-
+        
         // press f to interact
       
         notificationUI.SetActive(true);
-        notificationTextUI.text = notificationMessage;        
+        notificationTextUI.text = notificationMessage;
+        notificationImageUI.texture = notificationImage;
         if (disableAfterTimer)
         {
             yield return new WaitForSeconds(disableTimer);
@@ -66,7 +70,7 @@ public class NotificationTriggerEvent : MonoBehaviour
 
     void RemoveNotification()
     {
-        //gameObject.SetActive(false);
+        
         // disable the text notification
         notificationTextUI.text = "";
         notificationUI.SetActive(false);
