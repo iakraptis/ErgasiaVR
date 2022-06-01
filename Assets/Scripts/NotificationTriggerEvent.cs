@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class NotificationTriggerEvent : MonoBehaviour
 {
     [Header("UI Content")]
-    [SerializeField] private Text notificationTextUI;
     [SerializeField] private GameObject notificationUI;
+    [SerializeField] private Text notificationTextUI;    
     [SerializeField] private RawImage notificationImageUI;
+    
+    
     
     [Header("Message Customisation")]
     
@@ -40,6 +42,7 @@ public class NotificationTriggerEvent : MonoBehaviour
             Debug.Log("Player has entered the trigger");
             inRange = true;
             StartCoroutine(EnableNotification());
+            removeAfterExit = true;
         }
     }
 
@@ -48,6 +51,7 @@ public class NotificationTriggerEvent : MonoBehaviour
         if (other.CompareTag("Player") && removeAfterExit)
         {
             RemoveNotification();
+            notificationUI.SetActive(false);
             inRange = false;
         }
       
@@ -56,7 +60,7 @@ public class NotificationTriggerEvent : MonoBehaviour
     IEnumerator EnableNotification()
     {
         
-        // press f to interact
+        
       
         notificationUI.SetActive(true);
         notificationTextUI.text = notificationMessage;

@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (!grounded)
         {
-            // move player
+            // move player while in air
             rb.AddForce(moveDirection.normalized * moveSpeed * airMultiplier, ForceMode.Force);
         }
     }
