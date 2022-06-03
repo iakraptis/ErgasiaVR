@@ -18,9 +18,10 @@ public class PlayerCam : MonoBehaviour
         // lock cursor and hide it
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 65;
     }
-    private void Update()
+     void Update()
     {
         // get mouse input
         float mouseX = Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
@@ -30,16 +31,22 @@ public class PlayerCam : MonoBehaviour
         yRotation += mouseX;
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        // rotate cam and orientation
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
         orientation.rotation = Quaternion.Euler(0f, yRotation, 0f);
+
+
 
         if (Input.GetKey("escape"))
         {
             Application.Quit();
         }
 
+    }
+
+     void FixedUpdate ()
+    {
+        // rotate cam and orientation
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        
     }
 
 }
