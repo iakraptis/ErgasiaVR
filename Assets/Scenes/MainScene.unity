@@ -1845,9 +1845,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1004267348514888, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023995795120224, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086318935849726, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1164288450502436, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
       propertyPath: m_Name
       value: Temple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310762543712642, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409957990813284, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525330960102040, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684920244858230, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740034325173806, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800030020398736, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872456144814250, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902313197752716, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923247664070678, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979306741978874, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989760430371966, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4064555647032484, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
       propertyPath: m_RootOrder
@@ -3019,8 +3075,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -117.08862, y: 0.5}
-  m_SizeDelta: {x: 993.4714, y: 240.7421}
+  m_AnchoredPosition: {x: -144.80682, y: 0.00080442}
+  m_SizeDelta: {x: 1038.6863, y: 296.0137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346408696
 MonoBehaviour:
@@ -3260,7 +3316,7 @@ MonoBehaviour:
     \u03C3\u03C4\u03BF\u03BD \u03C6\u03B1\u03C1\u03B1\u03CE \u03C4\u03B7\u03C2 4\u03B7\u03C2
     \u0394\u03C5\u03BD\u03B1\u03C3\u03C4\u03B5\u03AF\u03B1\u03C2 \u03C4\u03B7\u03C2
     \u03B1\u03C1\u03C7\u03B1\u03AF\u03B1\u03C2 \u0391\u03B9\u03B3\u03CD\u03C0\u03C4\u03BF\u03C5
-    \u03A7\u03AD\u03BF\u03C0\u03B1[4][5], \u03BF\u03B9 \u03B1\u03B9\u03B3\u03C5\u03C0\u03C4\u03B9\u03BF\u03BB\u03CC\u03B3\u03BF\u03B9
+    \u03A7\u03AD\u03BF\u03C0\u03B1, \u03BF\u03B9 \u03B1\u03B9\u03B3\u03C5\u03C0\u03C4\u03B9\u03BF\u03BB\u03CC\u03B3\u03BF\u03B9
     \u03C0\u03B9\u03C3\u03C4\u03B5\u03CD\u03BF\u03C5\u03BD \u03CC\u03C4\u03B9 \u03B7
     \u03C0\u03C5\u03C1\u03B1\u03BC\u03AF\u03B4\u03B1 \u03C7\u03C4\u03AF\u03C3\u03C4\u03B7\u03BA\u03B5
     \u03C3\u03B1\u03BD \u03C4\u03AC\u03C6\u03BF\u03C2 \u03C3\u03B5 \u03B4\u03B9\u03AC\u03C3\u03C4\u03B7\u03BC\u03B1
@@ -3306,8 +3362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1124, y: -127}
-  m_SizeDelta: {x: 231.36, y: 231.3617}
+  m_AnchoredPosition: {x: 1189, y: -153}
+  m_SizeDelta: {x: 278.9171, y: 278.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1453366807
 CanvasRenderer:
@@ -3962,8 +4018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 409.30225}
-  m_SizeDelta: {x: 1244.2009, y: 257.1661}
+  m_AnchoredPosition: {x: 0, y: 379}
+  m_SizeDelta: {x: 1335.4883, y: 306.589}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755366124
 MonoBehaviour:

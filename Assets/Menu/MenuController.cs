@@ -15,17 +15,26 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // initialize buttons
         var root = GetComponent<UIDocument>().rootVisualElement;
         startButton = root.Q<Button>("StartButton");
         controlButton = root.Q<Button>("ControlButton");
         exitButton = root.Q<Button>("ExitButton");
         controlText = root.Q<Label>("ControlText");
 
+       // call button functions
         exitButton.RegisterCallback<ClickEvent>(ev => ExitPressed());
         startButton.RegisterCallback<ClickEvent>(ev => StartPressed());
         controlButton.RegisterCallback<ClickEvent>(ev => ControlPressed());
         controlText.style.display = DisplayStyle.None;
 
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitPressed();
+        }
     }
 
     void ExitPressed()
@@ -43,7 +52,7 @@ public class MenuController : MonoBehaviour
     void ControlPressed()
     {
 
-        // enable control label, disable other buttons if controlsEnabled== false
+        // enable control label, disable other buttons
         if (controlsVisible == false)
         {
             controlsVisible = true;
